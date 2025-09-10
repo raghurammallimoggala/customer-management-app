@@ -1,0 +1,58 @@
+post http://localhost:5000/api/customers
+Content-Type: application/json
+
+{   
+    
+    "first_name": "ravi",
+    "last_name": "pasalapudi",
+    "phone_number": "1234567891"
+}
+
+### Get all customers
+GET http://localhost:5000/api/customers 
+
+### Get customer by ID
+GET http://localhost:5000/api/customers/3
+
+### Update customer by ID
+PUT http://localhost:5000/api/customers/1
+Content-Type: application/json
+
+{
+    "first_name": "raghuram",
+    "last_name": "mallimoggala",
+    "phone_number": "1234567890"
+}
+### Delete customer by ID
+
+DELETE http://localhost:5000/api/customers/6
+
+### Create Address
+POST http://localhost:5000/api/customers/1/addresses
+Content-Type: application/json
+
+{    
+    "address_details": "123 Main St",
+    "city": "Anytown",
+    "state": "CA",
+    "pin_code": "12345"
+}
+### get all addresses
+GET http://localhost:5000/api/customers/1/addresses
+
+### Get addresses by ID
+GET http://localhost:5000/api/addresses/2
+
+### Update addresses by ID
+PUT http://localhost:5000/api/addresses/1
+Content-Type: application/json
+
+{
+    "address_details": "456 Elm St",
+    "city": "Othertown",
+    "state": "NY",
+    "pin_code": "67890"
+}
+
+### Delete address by ID
+DELETE http://localhost:5000/api/addresses/1
