@@ -14,6 +14,7 @@ const initializeDB=async()=>{
         db=await open({
             filename:dbPath,
             driver:sqlite3.Database
+         
         })
         const port=5000
         app.listen(port,()=>{
@@ -140,4 +141,12 @@ app.delete("/api/addresses/:id",async(request,response)=>{
     WHERE id=?`;
     await db.run(query, [id])
     response.send("Address deleted successfully")
+})
+
+// react frontend server 
+
+app.use(express.static(path.join(__dirname, "../client/build"))); 
+
+app.get("/*", (request,response)=>{
+    response.sendFile(path.join(__dirname, "../client/build", "index.html"));
 })
