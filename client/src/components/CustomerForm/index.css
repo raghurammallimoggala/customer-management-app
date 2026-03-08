@@ -1,0 +1,78 @@
+.customer-form {
+  min-width: 60%;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.customer-form .heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Container for each field */
+.customer-form .container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.customer-form .label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Input fields */
+.customer-form input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.customer-form input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Error messages */
+.customer-form .error-message {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Submit button */
+.customer-form .submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.customer-form .submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .customer-form {
+    padding: 20px;
+    margin: 20px;
+  }
+}
